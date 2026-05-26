@@ -1,0 +1,29 @@
+# Ignore WordPress core files
+wp-admin/
+wp-includes/
+*.php
+!wp-config-sample.php
+
+# Ignore WordPress configuration (CRITICAL SECURITY)
+wp-config.php
+
+# Ignore everything in wp-content except our custom theme and plugins
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/adium-theme/
+
+# (Opcional) Si quieres ignorar los uploads (imágenes) para no saturar el repo:
+# wp-content/uploads/
+
+# Ignore Laragon/Server files
+.htaccess
+web.config
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
