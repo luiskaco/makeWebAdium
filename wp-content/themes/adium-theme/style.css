@@ -10,11 +10,11 @@ Text Domain: adium-theme
 */
 
 /* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
 /* --- Design Tokens --- */
 :root {
-  --font-primary: 'Montserrat', sans-serif;
+  --font-primary: 'Poppins', sans-serif;
 
   /* Colors */
   --color-magenta: #D82B5A;
@@ -345,6 +345,22 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
+}
+
+.banner-doctores-title {
+  color: var(--color-magenta);
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.results-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 /* --- Buscador Form --- */
@@ -884,6 +900,19 @@ img {
   .banner-doctores-image-wrap {
     height: 180px;
     border-radius: var(--radius-md);
+  }
+
+  .banner-doctores-title {
+    font-size: 1.5rem;
+    padding: 0 15px;
+  }
+
+  .results-header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   /* --- Search Form --- */

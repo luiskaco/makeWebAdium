@@ -107,7 +107,7 @@ $mock_specialists = array(
                 </div>
             <?php endif; ?>
         </div>
-        <h2 style="color: var(--color-magenta); font-size: 2rem; font-weight: 800; text-transform: uppercase; margin-bottom: 10px;">
+        <h2 class="banner-doctores-title">
             <?php echo esc_html($banner_titulo); ?>
         </h2>
         <hr style="border: 0; height: 3px; background-color: var(--color-magenta); width: 60%; margin: 0 auto 30px auto; border-radius: 2px;">
@@ -150,7 +150,7 @@ $mock_specialists = array(
 
     <!-- 3. Contenedor de Resultados (Oculto por defecto mediante CSS en línea para asegurar el comportamiento de la demo) -->
     <section class="results-box-container" style="display: none; animation: fadeIn 0.4s ease-out;">
-        <div style="margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center;">
+        <div class="results-header">
             <button id="back-to-search-btn" class="btn-cta" style="background-color: var(--color-orange); padding: 8px 20px; font-size: 0.95rem;">
                 ← Realizar Nueva Búsqueda
             </button>

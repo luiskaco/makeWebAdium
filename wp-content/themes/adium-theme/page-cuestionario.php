@@ -42,7 +42,7 @@ $tabs = get_field('tabs_autocuidado') ?: array(
     <section class="consulta-banner-section">
         <div class="hero-banner" style="--banner-bg: #FFF5F7; background: var(--banner-bg);">
             <div class="hero-banner-content">
-                <h2 class="hero-banner-title" style="font-size: 2rem;"><?php echo esc_html($consulta_titulo); ?></h2>
+                <h2 class="hero-banner-title"><?php echo esc_html($consulta_titulo); ?></h2>
                 <a href="<?php echo esc_url($consulta_url); ?>" class="btn-cta">
                     🔍 <?php echo esc_html($consulta_btn); ?>
                 </a>

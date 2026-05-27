@@ -30,5 +30,6 @@
 
 ## Fase 6: Páginas Secundarias y Ajustes Finales
 - [ ] Maquetar la plantilla `page-terminos.php` para Términos y Condiciones.
-- [ ] Realizar pruebas de responsividad y optimización móvil.
+- [x] Realizar pruebas de responsividad y optimización móvil (corregida desalineación y fuentes fijas en cabeceras/banners).
 - [ ] Ejecutar el plan de optimización SEO (Atributos ALT, titles, etiquetas semánticas HTML5).
+- [x] Cambiar la fuente principal del sitio web a Poppins (Regular, SemiBold, Bold, Light Italic).

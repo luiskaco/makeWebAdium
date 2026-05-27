@@ -1,5 +1,18 @@
 # 08_CHANGELOG.md - Registro de Cambios (Changelog)
 
+## [0.4.4] - 2026-05-27
+### Corregido
+- Solucionados los problemas de responsividad en móviles sobreescribiendo estilos en línea en `page-preguntar.php` y `page-cuestionario.php`.
+- Creadas las clases `.results-header` y `.banner-doctores-title` con sus respectivas reglas en `style.css` y media queries para pantallas de hasta `768px`.
+- Incremento de la versión de la hoja de estilos a `'2.6.0'` en `functions.php` para limpiar el caché de estilos.
+
+## [0.4.3] - 2026-05-27
+### Añadido
+- Sustitución de la fuente principal del sitio web por la familia tipográfica **Poppins** en Google Fonts.
+- Actualización de `@import` y la variable `--font-primary` en `style.css`.
+- Modificación del encolado en `functions.php` para cargar los pesos de Poppins requeridos (300, 400, 600, 700 e itálicas).
+- Incremento de la versión de la hoja de estilos a `'2.5.0'` para forzar la actualización del caché en los navegadores.
+
 ## [0.4.2] - 2026-05-27
 ### Corregido
 - Alineación de las claves del árbol de datos geográficos. Se cambiaron las claves PHP `'provincias'` y `'distritos'` por `'provinces'` y `'districts'` en `inc/import-data.php` para coincidir exactamente con las propiedades esperadas por el script de frontend en `functions.php`.

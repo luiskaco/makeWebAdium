@@ -20,11 +20,11 @@ add_action( 'after_setup_theme', 'adium_setup' );
 
 // Enqueue styles and scripts
 function adium_enqueue_scripts() {
-    // Enqueue Google Font Montserrat
-    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;1,300&display=swap', array(), null );
+    // Enqueue Google Font Poppins
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap', array(), null );
     
     // Main stylesheet
-    wp_enqueue_style( 'adium-style', get_stylesheet_uri(), array(), '2.4.0' );
+    wp_enqueue_style( 'adium-style', get_stylesheet_uri(), array(), '2.6.0' );
 
     // Enqueue jQuery
     wp_enqueue_script( 'jquery' );
