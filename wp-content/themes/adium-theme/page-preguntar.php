@@ -121,9 +121,6 @@ $mock_specialists = array(
                     <label for="dept">Departamento</label>
                     <select name="dept" id="dept" required>
                         <option value="">Seleccionar</option>
-                        <option value="lima">Lima</option>
-                        <option value="arequipa">Arequipa</option>
-                        <option value="la-libertad">La Libertad</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -218,37 +215,38 @@ $mock_specialists = array(
                 <?php endwhile; wp_reset_postdata(); ?>
             <?php endif; ?>
 
-            <!-- Always output mocks with correct data-attributes as backup or additional data -->
-            <?php foreach ($mock_specialists as $mock): ?>
-                <div class="doctor-card" 
-                     data-dept="<?php echo esc_attr($mock['dept']); ?>" 
-                     data-prov="<?php echo esc_attr($mock['prov']); ?>" 
-                     data-dist="<?php echo esc_attr($mock['dist']); ?>" 
-                     data-city="<?php echo esc_attr($mock['city']); ?>">
-                    <div class="doctor-name-col">
-                        <h3><?php echo esc_html($mock['title']); ?></h3>
-                        <div class="specialty"><?php echo esc_html($mock['especialidad']); ?></div>
-                    </div>
-                    <div class="vertical-divider"></div>
-                    <div class="doctor-details-col">
-                        <div class="clinic-title"><?php echo esc_html($mock['clinica_nombre']); ?></div>
-                        <div><?php echo esc_html($mock['clinica_direccion']); ?></div>
-                        <div><?php echo esc_html($mock['clinica_telefono_1'] . ' / ' . $mock['clinica_telefono_2']); ?></div>
-                        <div>Horario: <?php echo esc_html($mock['clinica_horario']); ?></div>
-                        <div><a href="#" class="clinic-link"><?php echo esc_html($mock['clinica_sitio_web']); ?></a></div>
-                        <div style="margin-top: 10px;">
-                            <a href="<?php echo esc_url($mock['clinica_enlace_agenda']); ?>" class="clinic-link" style="font-weight: 800; font-size: 1.1rem;">
-                                AGENDA TU CITA AQUÍ ↗
-                            </a>
+            <?php if ($show_mocks): ?>
+                <?php foreach ($mock_specialists as $mock): ?>
+                    <div class="doctor-card" 
+                         data-dept="<?php echo esc_attr($mock['dept']); ?>" 
+                         data-prov="<?php echo esc_attr($mock['prov']); ?>" 
+                         data-dist="<?php echo esc_attr($mock['dist']); ?>" 
+                         data-city="<?php echo esc_attr($mock['city']); ?>">
+                        <div class="doctor-name-col">
+                            <h3><?php echo esc_html($mock['title']); ?></h3>
+                            <div class="specialty"><?php echo esc_html($mock['especialidad']); ?></div>
+                        </div>
+                        <div class="vertical-divider"></div>
+                        <div class="doctor-details-col">
+                            <div class="clinic-title"><?php echo esc_html($mock['clinica_nombre']); ?></div>
+                            <div><?php echo esc_html($mock['clinica_direccion']); ?></div>
+                            <div><?php echo esc_html($mock['clinica_telefono_1'] . ' / ' . $mock['clinica_telefono_2']); ?></div>
+                            <div>Horario: <?php echo esc_html($mock['clinica_horario']); ?></div>
+                            <div><a href="#" class="clinic-link"><?php echo esc_html($mock['clinica_sitio_web']); ?></a></div>
+                            <div style="margin-top: 10px;">
+                                <a href="<?php echo esc_url($mock['clinica_enlace_agenda']); ?>" class="clinic-link" style="font-weight: 800; font-size: 1.1rem;">
+                                    AGENDA TU CITA AQUÍ ↗
+                                </a>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="<?php echo esc_url($mock['social_facebook']); ?>" class="social-icon" aria-label="Facebook">f</a>
+                            <a href="<?php echo esc_url($mock['social_instagram']); ?>" class="social-icon" aria-label="Instagram">ig</a>
+                            <a href="<?php echo esc_url($mock['social_linkedin']); ?>" class="social-icon" aria-label="LinkedIn">in</a>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="<?php echo esc_url($mock['social_facebook']); ?>" class="social-icon" aria-label="Facebook">f</a>
-                        <a href="<?php echo esc_url($mock['social_instagram']); ?>" class="social-icon" aria-label="Instagram">ig</a>
-                        <a href="<?php echo esc_url($mock['social_linkedin']); ?>" class="social-icon" aria-label="LinkedIn">in</a>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </section>
 

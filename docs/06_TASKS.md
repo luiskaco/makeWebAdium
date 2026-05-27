@@ -22,6 +22,8 @@
 - [ ] Desarrollar la sección del pie de página (`footer.php`).
 
 ## Fase 5: Motor de Búsqueda y Resultados
+- [x] Habilitar la subida de archivos `.json` en WordPress.
+- [x] Crear un script de importación backend (`import-data.php`) para procesar doctores y ubigeos grandes.
 - [ ] Maquetar el formulario de búsqueda con los dropdowns en `archive-especialista.php`.
 - [ ] Implementar la consulta PHP (`WP_Query`) con filtros de geolocalización.
 - [ ] Diseñar las tarjetas de resultados de Especialistas (Screen 4).

@@ -1,5 +1,22 @@
 # 08_CHANGELOG.md - Registro de Cambios (Changelog)
 
+## [0.4.2] - 2026-05-27
+### Corregido
+- Alineación de las claves del árbol de datos geográficos. Se cambiaron las claves PHP `'provincias'` y `'distritos'` por `'provinces'` y `'districts'` en `inc/import-data.php` para coincidir exactamente con las propiedades esperadas por el script de frontend en `functions.php`.
+
+## [0.4.1] - 2026-05-27
+### Corregido
+- Corregido error de sintaxis JS en la inyección inline de `geoData` en `functions.php`. Se eliminaron las comillas simples escapadas (`\'`) incorrectas en la concatenación de PHP, solucionando el bloqueo en la ejecución de scripts que impedía el funcionamiento de las pestañas (tabs) y los selectores geográficos en el frontend.
+
+## [0.4.0] - 2026-05-27
+### Añadido
+- Habilitación de subida de archivos formato `.json` a través de filtro en `functions.php`.
+- Creación de script de importación backend (`import-data.php`) accesible desde Herramientas en wp-admin.
+- Automatización de creación de CPTs 'Especialista' a partir del archivo JSON del directorio médico.
+- Lógica de compresión de JSON de ubigeos (23MB) para extraer exclusivamente los departamentos y distritos con presencia médica, guardándolos dinámicamente como la opción `adium_geo_data` en la BD.
+- Sustitución de variable JS `geoData` estática en `functions.php` para inyectar directamente la configuración geográfica optimizada desde WordPress usando PHP `json_encode`.
+- Modificación de la plantilla `page-preguntar.php` para asegurar que los "médicos de prueba" (mocks) sólo se visualicen en caso de que la base de datos se encuentre vacía de posts tipo especialista.
+
 ## [0.3.6] - 2026-05-26
 ### Añadido
 - Implementación de un menú de navegación responsivo con botón de hamburguesa (`.menu-toggle`) en dispositivos móviles (pantallas menores a `768px`).

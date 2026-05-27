@@ -50,43 +50,16 @@ function adium_enqueue_scripts() {
                 $("#tab-content-" + tabId).addClass("active");
             });
 
-            // 2. Nested Selects Geographic Data Map
-            var geoData = {
-                "lima": {
-                    "label": "Lima",
-                    "provinces": {
-                        "lima": {
-                            "label": "Lima",
-                            "districts": {
-                                "jesus-maria": { "label": "Jesús María", "cities": { "lima": "Lima" } },
-                                "miraflores": { "label": "Miraflores", "cities": { "lima": "Lima" } }
-                            }
-                        }
-                    }
-                },
-                "arequipa": {
-                    "label": "Arequipa",
-                    "provinces": {
-                        "arequipa": {
-                            "label": "Arequipa",
-                            "districts": {
-                                "arequipa": { "label": "Arequipa (Distrito)", "cities": { "arequipa": "Arequipa" } }
-                            }
-                        }
-                    }
-                },
-                "la-libertad": {
-                    "label": "La Libertad",
-                    "provinces": {
-                        "trujillo": {
-                            "label": "Trujillo",
-                            "districts": {
-                                "trujillo": { "label": "Trujillo (Distrito)", "cities": { "trujillo": "Trujillo" } }
-                            }
-                        }
-                    }
-                }
-            };
+            // 2. Nested Selects Geographic Data Map (Obtenido dinámicamente de la Base de Datos)
+            var geoData = ' . json_encode(get_option('adium_geo_data', new stdClass())) . ';
+
+            // Populate Departamentos on load
+            var $deptSelect = $("#dept");
+            if (Object.keys(geoData).length > 0) {
+                $.each(geoData, function(key, data) {
+                    $deptSelect.append($("<option>", { value: key, text: data.label }));
+                });
+            }
 
             // Update Provinces when Departamento changes
             $("#dept").change(function() {
@@ -201,3 +174,13 @@ add_action( 'wp_enqueue_scripts', 'adium_enqueue_scripts' );
 // Include Custom Post Types and ACF fields
 require_once get_template_directory() . '/inc/cpts-especialistas.php';
 require_once get_template_directory() . '/inc/acf-fields.php';
+
+// Include Data Import Script
+require_once get_template_directory() . '/inc/import-data.php';
+
+// Allow JSON file uploads
+function adium_allow_json_uploads( $mimes ) {
+    $mimes['json'] = 'application/json';
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'adium_allow_json_uploads' );

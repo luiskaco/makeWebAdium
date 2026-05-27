@@ -3,6 +3,8 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/favicon.png" type="image/png">
+    <link rel="icon" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/favicon.png" type="image/png">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

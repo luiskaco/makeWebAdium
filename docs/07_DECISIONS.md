@@ -25,3 +25,11 @@
   - Consultas SQL mucho más rápidas y optimizadas mediante `tax_query`.
   - Evita errores tipográficos al registrar doctores (se eligen de una estructura de categorías existente).
   - Permite crear URLs semánticas amigables para SEO (ej. `/especialistas/lima/jesus-maria/`).
+
+## DEC-04: Optimización de Archivo Ubigeo y Búsqueda Dinámica
+- **Estado**: Implementado.
+- **Contexto**: El archivo completo de ubigeos pesaba 23MB, lo que destruiría la performance del lado del cliente.
+- **Decisión**: Crear un script de importación backend (`import-data.php`) que procese el JSON, extraiga solo las ubicaciones con especialistas y guarde un diccionario reducido (`adium_geo_data`) en la base de datos de WordPress.
+- **Consecuencias**:
+  - Tiempos de carga casi instantáneos en la página de búsqueda.
+  - El buscador es completamente dinámico pero sin penalización al renderizado inicial.
