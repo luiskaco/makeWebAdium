@@ -10,7 +10,7 @@ $cuestionario_titulo = get_field('cuestionario_titulo') ?: 'DA EL PRIMER PASO HA
 $cuestionario_sub = get_field('cuestionario_subtítulo') ?: 'Haz un test rápido y descubre si necesitas apoyo profesional';
 $cuestionario_btn = get_field('cuestionario_btn_txt') ?: 'Empezar cuestionario';
 $cuestionario_url = get_field('cuestionario_btn_url') ?: '#';
-$cuestionario_img = get_field('cuestionario_img') ?: ''; 
+$cuestionario_img = get_field('cuestionario_img') ?: esc_url( home_url( '/wp-content/uploads/2026/05/CONSULTA-CON-TU-ESPECIALISTA-1-BOTON.webp' ) );
 
 $tabs = get_field('tabs_autocuidado') ?: array(
     array(
@@ -77,7 +77,8 @@ $tabs = get_field('tabs_autocuidado') ?: array(
                 <h2 class="hero-banner-title"><?php echo esc_html($cuestionario_titulo); ?></h2>
                 <p class="hero-banner-subtitle"><?php echo esc_html($cuestionario_sub); ?></p>
                 <a href="<?php echo esc_url($cuestionario_url); ?>" class="btn-cta">
-                    <?php echo esc_html($cuestionario_btn); ?> ▶
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: text-bottom; display: inline-block;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <?php echo esc_html($cuestionario_btn); ?>
                 </a>
             </div>
             <div class="hero-banner-image">
