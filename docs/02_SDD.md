@@ -20,7 +20,8 @@ La estructura del tema constará de los siguientes archivos:
 - `functions.php`: Registro de scripts, hojas de estilo, soporte del tema y carga de módulos.
 - `header.php`: Estructura HTML de cabecera y navegación.
 - `footer.php`: Estructura HTML del pie de página.
-- `front-page.php`: Maquetación de la página principal (Banners, Pestañas, CTA).
+- `front-page.php`: Maquetación de la página principal (Banner de Consulta y Pestañas).
+- `page-cuestionario.php`: Plantilla para Cuestionario (Pestañas y Banner del Cuestionario).
 - `archive-especialista.php`: Plantilla para el motor de búsqueda y resultados de Especialistas.
 - `page-terminos.php`: Plantilla para Términos y Condiciones.
 - `inc/cpts-especialistas.php`: Registro de Custom Post Types y Taxonomías.

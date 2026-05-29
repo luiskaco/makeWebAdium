@@ -26,7 +26,7 @@ La navegación debe ser fluida, limpia y accesible desde dispositivos móviles y
 - Administrable completamente desde ACF (campo repetidor o campos dedicados).
 
 ### RF-03: Banner del Cuestionario
-- Sección destacada para incentivar a los usuarios a realizar el test de bienestar.
+- Sección destacada para incentivar a los usuarios a realizar el test de bienestar, reubicada en la Página de Cuestionario.
 - Título principal y subtítulo descriptivo.
 - Botón de llamada a la acción (CTA) con el texto "Empezar cuestionario ▶".
 - Enlace dinámico y fondo administrable mediante ACF.

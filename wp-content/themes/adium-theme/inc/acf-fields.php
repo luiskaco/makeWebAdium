@@ -148,47 +148,6 @@ acf_add_local_field_group(array(
     'key' => 'group_home_settings',
     'title' => 'Configuración de la Página de Inicio',
     'fields' => array(
-        // Banner Cuestionario
-        array(
-            'key' => 'field_home_banner_cuestionario_tab',
-            'label' => 'Banner Cuestionario',
-            'type' => 'tab',
-        ),
-        array(
-            'key' => 'field_home_cuestionario_titulo',
-            'label' => 'Título del Banner',
-            'name' => 'cuestionario_titulo',
-            'type' => 'text',
-            'default_value' => 'DA EL PRIMER PASO HACIA TU BIENESTAR',
-        ),
-        array(
-            'key' => 'field_home_cuestionario_sub',
-            'label' => 'Subtítulo del Banner',
-            'name' => 'cuestionario_subtítulo',
-            'type' => 'text',
-            'default_value' => 'Haz un test rápido y descubre si necesitas apoyo profesional',
-        ),
-        array(
-            'key' => 'field_home_cuestionario_btn_txt',
-            'label' => 'Texto del Botón',
-            'name' => 'cuestionario_btn_txt',
-            'type' => 'text',
-            'default_value' => 'Empezar cuestionario',
-        ),
-        array(
-            'key' => 'field_home_cuestionario_btn_url',
-            'label' => 'URL del Botón',
-            'name' => 'cuestionario_btn_url',
-            'type' => 'url',
-            'default_value' => '#',
-        ),
-        array(
-            'key' => 'field_home_cuestionario_img',
-            'label' => 'Imagen del Banner',
-            'name' => 'cuestionario_img',
-            'type' => 'image',
-            'return_format' => 'url',
-        ),
         // Banner Consulta Especialistas
         array(
             'key' => 'field_home_banner_consulta_tab',
@@ -296,37 +255,44 @@ acf_add_local_field_group(array(
     'key' => 'group_cuestionario_settings',
     'title' => 'Configuración de la Página de Cuestionario',
     'fields' => array(
-        // Banner Consulta Especialistas
+        // Banner Cuestionario
         array(
-            'key' => 'field_cuest_banner_consulta_tab',
-            'label' => 'Banner Consulta Especialistas',
+            'key' => 'field_cuest_banner_cuestionario_tab',
+            'label' => 'Banner Cuestionario',
             'type' => 'tab',
         ),
         array(
-            'key' => 'field_cuest_consulta_titulo',
-            'label' => 'Título de Consulta',
-            'name' => 'consulta_titulo',
+            'key' => 'field_cuest_cuestionario_titulo',
+            'label' => 'Título del Banner',
+            'name' => 'cuestionario_titulo',
             'type' => 'text',
-            'default_value' => 'CONSULTA CON UN ESPECIALISTA Y RECIBE ORIENTACIÓN OPORTUNA',
+            'default_value' => 'DA EL PRIMER PASO HACIA TU BIENESTAR',
         ),
         array(
-            'key' => 'field_cuest_consulta_btn_txt',
-            'label' => 'Texto del Botón Consulta',
-            'name' => 'consulta_btn_txt',
+            'key' => 'field_cuest_cuestionario_sub',
+            'label' => 'Subtítulo del Banner',
+            'name' => 'cuestionario_subtítulo',
             'type' => 'text',
-            'default_value' => 'BUSCAR UN ESPECIALISTA',
+            'default_value' => 'Haz un test rápido y descubre si necesitas apoyo profesional',
         ),
         array(
-            'key' => 'field_cuest_consulta_btn_url',
-            'label' => 'URL del Botón Consulta',
-            'name' => 'consulta_btn_url',
+            'key' => 'field_cuest_cuestionario_btn_txt',
+            'label' => 'Texto del Botón',
+            'name' => 'cuestionario_btn_txt',
+            'type' => 'text',
+            'default_value' => 'Empezar cuestionario',
+        ),
+        array(
+            'key' => 'field_cuest_cuestionario_btn_url',
+            'label' => 'URL del Botón',
+            'name' => 'cuestionario_btn_url',
             'type' => 'url',
             'default_value' => '#',
         ),
         array(
-            'key' => 'field_cuest_consulta_img',
-            'label' => 'Imagen de los Médicos',
-            'name' => 'consulta_img',
+            'key' => 'field_cuest_cuestionario_img',
+            'label' => 'Imagen del Banner',
+            'name' => 'cuestionario_img',
             'type' => 'image',
             'return_format' => 'url',
         ),
@@ -430,3 +396,4 @@ acf_add_local_field_group(array(
 ));
 
 endif;
+

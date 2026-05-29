@@ -6,10 +6,11 @@
 get_header();
 
 // Fetch banner ACF values or use default mocks
-$consulta_titulo = get_field('consulta_titulo') ?: 'CONSULTA CON UN ESPECIALISTA Y RECIBE ORIENTACIÓN OPORTUNA';
-$consulta_btn = get_field('consulta_btn_txt') ?: 'BUSCAR UN ESPECIALISTA';
-$consulta_url = get_field('consulta_btn_url') ?: esc_url( home_url( '/preguntar/' ) );
-$consulta_img = get_field('consulta_img') ?: '';
+$cuestionario_titulo = get_field('cuestionario_titulo') ?: 'DA EL PRIMER PASO HACIA TU BIENESTAR';
+$cuestionario_sub = get_field('cuestionario_subtítulo') ?: 'Haz un test rápido y descubre si necesitas apoyo profesional';
+$cuestionario_btn = get_field('cuestionario_btn_txt') ?: 'Empezar cuestionario';
+$cuestionario_url = get_field('cuestionario_btn_url') ?: '#';
+$cuestionario_img = get_field('cuestionario_img') ?: ''; 
 
 $tabs = get_field('tabs_autocuidado') ?: array(
     array(
@@ -38,28 +39,7 @@ $tabs = get_field('tabs_autocuidado') ?: array(
 
 <div class="cuestionario-page-container">
 
-    <!-- 1. Banner Consulta con Especialistas (Arriba de los tabs) -->
-    <section class="consulta-banner-section">
-        <div class="hero-banner" style="--banner-bg: #FFF5F7; background: var(--banner-bg);">
-            <div class="hero-banner-content">
-                <h2 class="hero-banner-title"><?php echo esc_html($consulta_titulo); ?></h2>
-                <a href="<?php echo esc_url($consulta_url); ?>" class="btn-cta">
-                    🔍 <?php echo esc_html($consulta_btn); ?>
-                </a>
-            </div>
-            <div class="hero-banner-image">
-                <?php if (!empty($consulta_img)): ?>
-                    <img src="<?php echo esc_url($consulta_img); ?>" alt="Especialistas médicos sonriendo">
-                <?php else: ?>
-                    <div style="background: linear-gradient(45deg, #FFF5F7, #FFE4E6); width: 100%; height: 320px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #E11D48;">
-                        🩺 [Imagen: Grupo de 5 Especialistas]
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. Módulo interactivo de pestañas -->
+    <!-- 1. Módulo interactivo de pestañas -->
     <section class="tabs-section">
         <div class="tabs-nav">
             <?php foreach ($tabs as $index => $tab): ?>
@@ -90,7 +70,30 @@ $tabs = get_field('tabs_autocuidado') ?: array(
         </div>
     </section>
 
+    <!-- 2. Banner Cuestionario -->
+    <section class="cuestionario-banner-section">
+        <div class="hero-banner">
+            <div class="hero-banner-content">
+                <h2 class="hero-banner-title"><?php echo esc_html($cuestionario_titulo); ?></h2>
+                <p class="hero-banner-subtitle"><?php echo esc_html($cuestionario_sub); ?></p>
+                <a href="<?php echo esc_url($cuestionario_url); ?>" class="btn-cta">
+                    <?php echo esc_html($cuestionario_btn); ?> ▶
+                </a>
+            </div>
+            <div class="hero-banner-image">
+                <?php if (!empty($cuestionario_img)): ?>
+                    <img src="<?php echo esc_url($cuestionario_img); ?>" alt="Test de bienestar emocional">
+                <?php else: ?>
+                    <div style="background: linear-gradient(45deg, #E2E8F0, #CBD5E1); width: 100%; height: 320px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #475569;">
+                        📱 [Imagen: Mano con Teléfono Móvil]
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+
 </div>
 
 <?php
 get_footer();
+

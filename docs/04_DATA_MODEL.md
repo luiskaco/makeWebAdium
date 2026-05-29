@@ -34,17 +34,29 @@ Asociado a la Página de Inicio (Front Page).
 
 | Nombre del Campo | Key de ACF | Tipo | Descripción / Opciones |
 | :--- | :--- | :--- | :--- |
-| Banner Inicio - Título | `banner_inicio_titulo` | Texto | Título principal en el banner |
-| Banner Inicio - Subtítulo | `banner_inicio_subtitulo` | Texto | Subtítulo del banner |
-| Banner Inicio - Enlace | `banner_inicio_enlace` | URL / Relación | Enlace al buscador o cita |
-| Banner Inicio - Texto Botón | `banner_inicio_texto_boton`| Texto | Texto para el botón de acción |
-| Banner Inicio - Imagen | `banner_inicio_imagen` | Imagen | Imagen de fondo / lateral (médicos) |
+| Banner Consulta - Título | `consulta_titulo` | Texto | Título principal en el banner de especialistas |
+| Banner Consulta - Texto Botón | `consulta_btn_txt` | Texto | Texto para el botón de buscar especialista |
+| Banner Consulta - URL Botón | `consulta_btn_url` | URL | URL destino de la búsqueda |
+| Banner Consulta - Imagen | `consulta_img` | Imagen | Imagen de los médicos |
 | Pestañas Autocuidado | `tabs_autocuidado` | Repeater | Repetidor para las pestañas de auto-cuidado |
 | ↳ Título de la Pestaña | `tab_titulo` | Texto | Nombre de la pestaña (Explora, Sueño, etc.) |
 | ↳ Color de la Pestaña | `tab_color` | Select | Opciones: Magenta, Naranja |
-| ↳ Imagen de la Tarjeta | `tab_imagen` | Imagen | Imagen del bowl o elemento representativo |
+| ↳ Imagen de la Tarjeta | `tab_imagen` | Imagen | Imagen del consejo |
 | ↳ Título del Consejo | `tab_consejo_titulo` | Texto | Título de la tarjeta |
 | ↳ Texto del Consejo | `tab_consejo_texto` | Área de Texto | Descripción larga del consejo |
+
+### Grupo: Configuración de la Página de Cuestionario (`group_cuestionario_settings`)
+Asociado a la plantilla `page-cuestionario.php`.
+
+| Nombre del Campo | Key de ACF | Tipo | Descripción / Opciones |
+| :--- | :--- | :--- | :--- |
+| Banner Cuestionario - Título | `cuestionario_titulo` | Texto | Título principal en el banner del cuestionario |
+| Banner Cuestionario - Subtítulo | `cuestionario_subtítulo` | Texto | Subtítulo descriptivo |
+| Banner Cuestionario - Texto Botón | `cuestionario_btn_txt` | Texto | Texto del botón |
+| Banner Cuestionario - URL Botón | `cuestionario_btn_url` | URL | Enlace para empezar el cuestionario |
+| Banner Cuestionario - Imagen | `cuestionario_img` | Imagen | Imagen del banner (teléfono móvil, etc.) |
+| Pestañas Autocuidado | `tabs_autocuidado` | Repeater | Repetidor para las pestañas de auto-cuidado |
+
 
 ---
 

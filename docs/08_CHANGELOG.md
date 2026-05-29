@@ -1,5 +1,55 @@
 # 08_CHANGELOG.md - Registro de Cambios (Changelog)
 
+## [0.4.10] - 2026-05-29
+### Añadido
+- Finalizada la barra inferior del footer añadiendo iconos de redes sociales (Instagram, LinkedIn, Facebook) en formato SVG, alineados a la derecha, con estado `hover` interactivo (color magenta `var(--color-magenta)`).
+- Recreada la estructura de la sección 8 (`.info-cards-section`) reemplazando los fondos de imagen recortados (`obesidad-card-full.png`, `diabetes-card-full.png`) por una maquetación 100% nativa de HTML/CSS: fondo salmón `#E8835E` sólido, layout Flexbox en fila, sombra paralela, y un recuadro de *placeholder* cuadrado (100x100px) con borde discontinuo para indicar visualmente dónde irán las futuras fotografías reales, manteniendo los textos y el botón "Más información" alineados fielmente al diseño de la maqueta `8.png`.
+- Refinada la versión de la hoja de estilos a `2.20.0` en `functions.php`.
+
+## [0.4.9] - 2026-05-29
+### Añadido
+- Recreada la sección `7.png` ("La voz de los especialistas") en HTML/CSS nativo en `front-page.php`. Se recortaron con PHP GD las 3 fotos de doctores (`doc1-card.png`, `doc2-card.png`, `doc3-card.png`) directamente de `7.png` (954×526px) y se montaron como cards con botón play y texto de pregunta superpuesto.
+- Recreada la sección `8.png` (tarjetas de Obesidad y Diabetes) usando las tarjetas completas como imágenes de fondo (`obesidad-card-full.png`, `diabetes-card-full.png`), recortadas con PHP GD de la imagen original (953×119px), con overlay HTML para el texto y el botón.
+- Añadidos estilos CSS completos para `.specialists-voice-section` con grid de 3 columnas, botón play, texto de pregunta superpuesto, hover con zoom y navegación ‹ › responsiva.
+- Resueltos conflictos de CSS: eliminado bloque duplicado de `.info-card-col`, eliminado bloque duplicado de `.site-footer`, aplicado scope a `.logo-quote-left/right` dentro de `.site-header` y `.footer-logo-quote-box`.
+- Versión de hoja de estilos bumped a `2.16.0` en `functions.php`.
+### Estrategia
+- Todos los activos de imagen provienen del arte original de las capturas de pantalla de diseño. Los recortes se realizan con PHP GD en tiempo de setup, no en runtime.
+
+## [0.4.8] - 2026-05-29
+
+### Añadido
+- Añadidas 4 secciones de ancho completo en la parte inferior de la página de inicio, debajo de la sección de pestañas (Autocuidado). Las secciones `8.png`, `9.png` y `10.png` han sido reemplazadas por componentes de código HTML/CSS interactivos.
+- Recreada la imagen `8.png` completa mediante maquetación nativa HTML y CSS (`.info-cards-section`), utilizando imágenes individuales recortadas (`obesidad-card.png` y `diabetes-card.png`), textos limpios con Poppins y botones funcionales de "Más información".
+- Recreada la imagen `9.png` completa en código HTML y CSS en `front-page.php` (`.newsletter-section`) con un formulario interactivo real, campo de e-mail y el enlace de referencias.
+- Recreada la imagen `10.png` de forma nativa a nivel global modificando `footer.php` para incorporar la caja del logotipo con borde, eslogan con comillas, y enlaces inline separados por viñetas.
+- Agregado espaciado vertical (padding de `45px` en PC y `25px` en móviles) a la clase `.consulta-banner-section` en `style.css` para separar adecuadamente el banner de consulta de las secciones circundantes.
+- Incrementada la versión de la hoja de estilos a `'2.14.0'` en `functions.php` para forzar la actualización del caché en los navegadores.
+- Ajustado el margen inferior (`margin-bottom`) del componente de pestañas (`.tabs-section`) a `75px` en PC y `50px` en móviles para separarlo visualmente de las nuevas secciones inferiores.
+
+## [0.4.7] - 2026-05-29
+### Añadido
+- Añadidas 5 secciones de introducción adicionales (`.home-intro-image-section`) en secuencia vertical en la página de inicio (`front-page.php`) cargando los fondos de imagen `2.webp`, `3.webp`, `4.webp`, `5.webp` y `6.webp` dinámicamente con `home_url()`.
+- Heredado el mismo comportamiento responsivo y visual (breakout full-bleed) y las propiedades de altura adaptativa con modificadores `!important` para toda la secuencia de intros.
+
+## [0.4.6] - 2026-05-29
+### Añadido
+- Añadida sección de introducción extendida (`.home-intro-image-section`) en la parte superior de la página de inicio (`front-page.php`) con la imagen de fondo `s1.webp`.
+- Configurado ancho completo (full-bleed) y compensación responsiva de márgenes en `style.css`.
+- Incrementado el número de versión de la hoja de estilos a `'2.8.0'` en `functions.php` para limpiar activamente el caché de CSS del navegador.
+- Añadido soporte redundante inline de `min-height: 520px; display: block;` en `front-page.php` como fallback seguro para la sección intro.
+### Corregido
+- Corregido error visual de pantalla en blanco ("se ve nada") en la página de inicio reemplazando el posicionamiento `left: 50%; right: 50%` por `margin-left: calc(-50vw + 50%)` en la clase `.home-intro-image-section`.
+- Restaurado el uso de `home_url()` dinámico en PHP para cargar de manera segura la imagen `s1.webp` en cualquier host/dominio local.
+- Agregado modificador `!important` a las consultas de medios (media queries) de responsividad en `.home-intro-image-section` y `.home-intro-spacer` en `style.css` para anular correctamente los estilos inline redundantes en tablets y dispositivos móviles.
+
+## [0.4.5] - 2026-05-29
+### Añadido
+- Inversión de las vistas del Cuestionario e Inicio (front-page.php y page-cuestionario.php).
+- La página de inicio (index) ahora muestra el banner de consulta de especialistas arriba, y la de cuestionario muestra las pestañas de autocuidado y el banner del cuestionario abajo.
+- Re-estructurados los grupos de campos de ACF en `inc/acf-fields.php` (`group_home_settings` y `group_cuestionario_settings`) para reflejar esta inversión de lógica.
+- Actualizada la documentación del proyecto (`01_PROJECT_PRD.md`, `02_SDD.md`, `04_DATA_MODEL.md`).
+
 ## [0.4.4] - 2026-05-27
 ### Corregido
 - Solucionados los problemas de responsividad en móviles sobreescribiendo estilos en línea en `page-preguntar.php` y `page-cuestionario.php`.
